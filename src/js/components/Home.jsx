@@ -1,26 +1,29 @@
 import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
 //create your first component
 const Home = () => {
+	const [listValue , setListValue] = useState('lista');
+
+
+// agregar y completar hook 
+
+
 	return (
 		<div className="text-center">
-            
+			<h1 className="text-center mt-5">ToDo list</h1>
+			<div>
+				<input
+				type="text"
+				onChange={''}
+				value={''}
+				placeholder="Type your ToDo's"
+				/>
+			</div>
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+			<ul className="list-group col-4 text-center">
+				<li className="list-group-item active" aria-current="true">An active item</li>
+				<li className="list-group-item">A second item</li>
+			</ul>
 		</div>
 	);
 };
